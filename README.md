@@ -5,9 +5,9 @@ Unblock / secure your administration access to your servers / vps in the cloud .
 
 prérequis= 
 apt-get install apache2 mysql-server phpmyadmin
-1- Configure IPtables 
+## 1- Configure IPtables 
    
-   # apt-get install ipset
+   % apt-get install ipset
    
 2- configure apache2 
 
