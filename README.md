@@ -4,19 +4,33 @@ Debloquez / sécurisez  vos accès d'administration de vos serveurs/vps dans le 
 Unblock / secure your administration access to your servers / vps in the cloud .
 
 prérequis= Debian GNU/Linux 9 ( debian-9.8.0-amd64-netinst.iso )
-apt-get install apache2 mysql-server phpmyadmin
+ apt-get  install sysv-rc-conf
+ 
+
 ### 1- Change standard port 
 
+### 2- ipset 
+   
+apt-get install ipset
+
 ### 1- iptables
+creer fichier firewal dans /etc/init.d/ 
 vim.tiny firewall
 
 chmod 755 firewall
+update-rc.d firewall enable
+update-rc.d firewall defaults
 
-### 2- Configure IPtables 
+
    
-   % apt-get install ipset
-   
-### 3- configure apache2 
+### 3- configure apache2 ,php7,mysql
+
+apt-get install apache2
+apt-get install php
+apt-get install mysql-server
+apt-get install php-mysql
+apt-get install phpmyadmin
+mkdir /var/www/connect
 
 Limit visible information  -> /etc/apache2/conf-available/security.conf
    change "ServerTokens OS"   by   "ServerTokens Prod"
