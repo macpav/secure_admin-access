@@ -7,7 +7,11 @@ prérequis= Debian GNU/Linux 9 ( debian-9.8.0-amd64-netinst.iso )
 apt-get install apache2 mysql-server phpmyadmin
 ### 1- Change standard port 
 
-### 1- iptzbles
+### 1- iptables
+vim.tiny firewall
+
+chmod 755 firewall
+
 ### 2- Configure IPtables 
    
    % apt-get install ipset
